@@ -1,0 +1,52 @@
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+
+}
+
+
+
+.main-title {
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, #fff, #000080);
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+.container {
+    display: flex;
+    
+}
+
+.search-area {
+    margin-left: 20px;
+    margin-right: 20px;
+  
+}
+
+.search-bar {
+    width: 20px;
+    length: 20px;
+
+}
+
+#search-button {
+    width: 148px;
+    
+}
+
+.weather-forcast-data {
+    display: inline-block;
+    display: block;
+}
+
+.cards {
+    display: flex;
+    gap: 100px;
+    
+}
+
