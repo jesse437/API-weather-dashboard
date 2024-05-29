@@ -1,100 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./assets/style.css" />
-  <title>The Weather Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <div class="main-title">
-    <h1><strong>Weather Dashboard</strong></h1>
-  </div>
-  <div class="container">
-    <div class="search-area">
-      <h2>Search for a City:</h2>
-      <div class="search-bar">
-        <input type="text" id="search-input" placeholder="" />
-        <button id="search-button">search</button>
-      </div>
+    <div class="jumbotron-fluid">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <h1>Search for the City:</h1>
+                    <input id="inputCityName" type="text" placeholder="San Diego">
+                    <button class="btn btn-primary btn-lg btn-block d-grid" id="searchBtn">Search</button>
+                </div>
+                <div class="list-group" id="cityList">
+                    
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="container current-weather">
+                    <div class="card-body">
+                        <div class="cityName h2"></div>
+                        <div class="date h2"></div>
+                        <img src="" alt="Weather Icon" class="weatherIcon">
+                    </div>
+                    <p class="card-text h4 temp"></p>
+                    <p class="card-text h4 wind"></p>
+                    <p class="card-text h4 humidity"></p>
+                    
+                </div>
+                <div class="forecastContainer">
+                    <h2 class="heading">5-Day Forecast:</h2>
+
+                    <div class="card-deck">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="weather-forcast-data">
-      <div id="specific-city">
-        <section class="city-data">
-          <h1>Name of city and date</h1>
-          <h3 id="currentTemp">Temp:</h3>
-          <h3 id="currentWind"></h3>
-          <h3 id="currentHumidity"></h3>
-        </section>
-      </div>
-      <div id="for-five-days">
-        <section class="five-day-forcast">
-          <h2>5-Day Forecast:</h2>
-          <div class="cards">
-            <div class="card">
-              <section class="day-one-forecast">
-                <strong>
-                  <p class="date">9/14/2022</p>
-                </strong>
-                <img src="" alt="day/night" />
-                <p>Temp: 63.56 F</p>
-                <p>Wind: 3.94 MPH</p>
-                <p>Humidity: 63%</p>
-              </section>
-            </div>
-            <div class="card">
-              <section class="day-two-forecast">
-                <strong>
-                  <p class="date">9/14/2022</p>
-                </strong>
-                <img src="" alt="day/night" />
-                <p>Temp: 63.56 F</p>
-                <p>Wind: 3.94 MPH</p>
-                <p>Humidity: 63%</p>
-              </section>
-            </div>
-            <div class="card">
-              <section class="day-three-forecast">
-                <strong>
-                  <p class="date">9/14/2022</p>
-                </strong>
-                <img src="" alt="day/night" />
-                <p>Temp: 63.56 F</p>
-                <p>Wind: 3.94 MPH</p>
-                <p>Humidity: 63%</p>
-              </section>
-            </div>
-            <div class="card">
-              <section class="day-four-forecast">
-                <strong>
-                  <p class="date">9/14/2022</p>
-                </strong>
-                <img src="" alt="day/night" />
-                <p>Temp: 63.56 F</p>
-                <p>Wind: 3.94 MPH</p>
-                <p>Humidity: 63%</p>
-              </section>
-            </div>
-            <div class="card">
-              <section class="day-five-forecast">
-                <strong>
-                  <p class="date">9/14/2022</p>
-                </strong>
-                <img src="" alt="day/night" />
-                <p>Temp: 63.56 F</p>
-                <p>Wind: 3.94 MPH</p>
-                <p>Humidity: 63%</p>
-              </section>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-  <script src="./script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
-
 </html>
