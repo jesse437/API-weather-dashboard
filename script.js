@@ -1,3 +1,4 @@
+/* These are all the selected classes and IDs*/
 const searchBtn = document.querySelector("#searchBtn");
 const inputCityName = document.querySelector("#inputCityName");
 const cityname = document.querySelector(".cityName");
@@ -19,6 +20,7 @@ var cityList = [];
 var city_name;
 localCityList();
 
+/* This function is the searched city*/
 searchBtn.addEventListener("click", function () {
   const cityName = document.querySelector("#inputCityName");
   var city_name = cityName.value.trim();
@@ -38,6 +40,7 @@ searchBtn.addEventListener("click", function () {
   historyCities();
 });
 
+/* This function saves searched cities on local storage*/
 function localCityList() {
   const savedData = JSON.parse(localStorage.getItem("cities"));
   if (savedData != null) {
@@ -48,6 +51,8 @@ function localCityList() {
     localStorage.setItem("cities", JSON.stringify(cityList));
   }
 }
+
+/* this next function retrieves the searched city */
 function displaySearchedCities() {
   const city_list = document.querySelector("#cityList");
   city_list.innerHTML = "";
@@ -70,6 +75,8 @@ function displaySearchedCities() {
     }
   }
 }
+
+/* The following api fetches the weather data */
 
 function displayWeather(city_name) {
   city_name = city_name.toLowerCase();

@@ -1,3 +1,4 @@
+/* This is css styling for the body */
 body {
   background-color: aqua;
   font-family: Arial;
@@ -12,6 +13,7 @@ body {
   margin: 10px 0;
   display: block;
 }
+/* This is all the styling for my main header*/
 .jumbotron-fluid h1 {
   padding: 30px;
   text-align: center;
@@ -19,6 +21,7 @@ body {
   color: white;
   font-size: 40px;
 }
+
 .current-weather .card-body {
   display: flex;
 }
